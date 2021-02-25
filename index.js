@@ -1,25 +1,35 @@
 
 function createPost() {
-	let page = getElementById("page-template").innerHTML
-    let post = getElementById("post-form").value
+	//let page = document.getElementById("page-template").value 
+    let postTitle = document.getElementById("postTitle").value
+    let postBody = document.getElementById("postBody").value
+    let postAuthor = document.getElementById("postAuthor").value 
 
+    let pageTemplate = 
 
-    let pageTemplate = '<div id="page-template sidebar post"><%= page %><span class="page"></span><%= page %></div>';
-
-    let postTemplate = '<div id="post-template"><%= post %><article><header></header><footer></footer></article><span class="post"></span><%= post %></div>';
+    let postTemplate = 
 
     let templateFn = _.template(postTemplate);
 
     let postDiv = document.getElementById('post-template');
 
-    let templateHTML = templateFn({ post: post });
+    let templateHTML = templateFn({ postTitle: postTitle, postBody: postBody, postAuthor: postAuthor });
 
     postDiv.innerHTML += templateHTML;
 }
 
 function postComment() {
-	let comment = getElementById("comment-form").value
+	let commentName = document.getElementById("commentName").value
+	let commentText = document.getElementById("commentText").value
 
-	let commentTemplate = '<div id="comment-template"><%= comment %><footer></footer><span class="comment"></span><%= comment %></div>';
+	let commentsTemplate = 
+
+	let templateFn = _.template(commentsTemplate);
+
+	let commentsDiv = document.getElementById('comment');
+
+	let templateHTML = templateFn({ commentName: commentName, commentText: commentText });
+
+	commentsDiv.innerHTML += templateHTML;
 
 }
