@@ -26,8 +26,8 @@
     </script>
     <script id="comment-template" type="text/x-lodash-template">
       <div>
-        <p><%= comment %></p>
-        <footer>Posted by: <%= commenter %></footer>
+        <p><%= commentText %></p>
+        <footer>Posted by: <%= commentName %></footer>
       </div>
     </script>
     <script id="page-template" type="text/x-lodash-template">
@@ -36,9 +36,9 @@
     </script>
     <script id="post-template" type="text/x-lodash-template">
       <article>
-        <header><h2><%- title %></h2><header>
-        <p><%- body %></p>
-        <footer>Posted by: <%= poster %></footer>
+        <header><h2><%= postTitle %></h2></header>
+        <p><%= postBody %></p>
+        <footer>Posted by: <%= postAuthor %></footer>
       </article>
     </script>
     </main>
