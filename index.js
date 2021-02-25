@@ -3,7 +3,7 @@ function createPost() {
 	let page = getElementById("page-template").innerHTML
     let post = getElementById("post-form").value
 
-    let postTemplate = '<div id="post-template"><%= post %><header></header><article></article><footer></footer><span class="post"></span><%= post %></div>';
+    let postTemplate = '<div id="post-template"><%= post %><article><header></header><footer></footer></article><span class="post"></span><%= post %></div>';
 
     let templateFn = _.template(postTemplate);
 
